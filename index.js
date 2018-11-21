@@ -57,7 +57,7 @@ function initiateMap() {
   map = new Tmap.Map({
     div: 'map',
     width: '100%',
-    height: '100vh'
+    height: '90vh'
   });
   
   // 기본값으로 서울 중심부 위치를 Zoom Level 15로 가리킵니다.
