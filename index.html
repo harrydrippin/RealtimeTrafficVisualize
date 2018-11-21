@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css"/>
+    <title>실시간 교통정보 기반 경로 탐색</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light" id="navbar">
+      <a class="navbar-brand" id="information">실시간 교통정보 반영 경로 탐색</a>
+    </nav>
+
+    <div class="container-fluid body-wrapper">
+      <div class="row">
+        <div class="col-md-3 tab-form">
+          <form class="form-wrapper">
+            <div class="card explainer">
+              <div class="card-body">
+                <h5 class="card-title">실시간 교통 정보 반영 경로 찾기</h5>
+                <p class="card-text">
+                  <b>20163179 홍승환</b><br/>
+                  T Map의 API를 이용하여 출발 지점과 도착 지점 사이의 여러 경로들 중 교통정보를 반영하였을 때 가장 빠르게 도달할 수 있는 경로를 불러와서 시각화합니다.
+                </p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-start">출발 장소</label>
+              <select class="form-control" id="form-start">
+                  <option>국민대학교</option>
+                  <option>서울시청</option>
+                  <option>인천국제공항 제2여객터미널</option>
+                  <option>대전시청</option>
+                  <option>부산시청</option>
+                  <option>주문진항</option>
+                </select>
+              <small id="emailHelp" class="form-text text-muted">경로의 출발 지점을 입력합니다.</small>
+            </div>
+            <div class="form-group">
+              <label for="form-end">도착 장소</label>
+              <select class="form-control" id="form-end">
+                  <option>국민대학교</option>
+                  <option>서울시청</option>
+                  <option>인천국제공항 제2여객터미널</option>
+                  <option>대전시청</option>
+                  <option>부산시청</option>
+                  <option>주문진항</option>
+                </select>
+              <small id="emailHelp" class="form-text text-muted">경로의 도착 지점을 입력합니다.</small>
+            </div>
+            <button type="button" id="trigger" onclick="searchRoute();" class="btn btn-dark" style="width: 100%;">경로 탐색</button>
+          </form>
+        </div>
+        <div class="col-md-9 tab-map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://api2.sktelecom.com/tmap/js?version=1&format=javascript&appKey=c01a2983-93e4-4f8a-9ae6-305532500471"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+.navbar {
+  transition: 1s;
+}
+
+#information {
+  transition: 1s;
+}
+
+.bg-success .navbar-brand {
+  color: white !important;
+}
+
+.bg-primary .navbar-brand {
+  color: white !important;
+}
+
+.bg-danger .navbar-brand {
+  color: white !important;
+}
+
+.body-wrapper {
+  margin-top: 15px;
+}
+
+.tab-form {
+  height: 100%;
+}
+
+.explainer {
+  margin-bottom: 30px;
+}
+
+select {
+  margin-top: 10px;
+}
+
+.tab-map {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
